@@ -10,3 +10,7 @@ body,
   overflow-x: hidden;
   background-color: cornflowerblue;
 }
+
+.keyShadow {
+  filter: drop-shadow(3px 3px 0px #000000);
+}
