@@ -25,6 +25,7 @@ function App() {
     });
   };
   const shuffleNTimes = async () => {
+    setStatus("-");
     setIsCorrectVisible(true);
     await new Promise((resolve) => setTimeout(resolve, 500));
     setIsCorrectVisible(false);
@@ -69,6 +70,30 @@ function App() {
           shuffle
         </button>
         <p className="text-3xl font-semibold text-yellow-300">{status}</p>
+        <div className="flex gap-x-2">
+          <div className="flex flex-col justify-center items-center text-xl font-semibold">
+            <p>Times</p>
+            <input
+              type="number"
+              className="rounded-xl px-1 py-2 w-24"
+              defaultValue={shuffelTimes}
+              onChange={(e) => {
+                setShuffelTimes(Number(e.target.value));
+              }}
+            />
+          </div>
+          <div className="flex flex-col justify-center items-center text-xl font-semibold">
+            <p>Speed</p>
+            <input
+              type="number"
+              className="rounded-xl px-1 py-2 w-24"
+              defaultValue={shuffelSpeed}
+              onChange={(e) => {
+                setShuffelSpeed(Number(e.target.value));
+              }}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
