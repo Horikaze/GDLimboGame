@@ -8,7 +8,7 @@ body,
   height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: cornflowerblue;
+  background-color: #030101;
 }
 
 .keyShadow {
